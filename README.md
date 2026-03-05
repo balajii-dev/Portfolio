@@ -30,12 +30,7 @@ Successfully implemented a secure communication bridge between the Vercel fronte
 * Users can send messages directly through the "Get In Touch" modal.
 * Data is validated on the backend and stored securely in **MongoDB**.
 
----
 
-## 🏗️ Architecture
-
-
----
 
 ## 🚀 Installation & Local Setup
 

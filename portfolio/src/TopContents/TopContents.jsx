@@ -3,14 +3,8 @@ import { Link } from 'react-scroll';
 
 const TopContent = () => {
   return (
-    /* CHANGE: Removed fixed large padding. 
-       Used px-6 (mobile) and md:pl-20 (desktop) to ensure text fits the screen.
-    */
     <div className='px-6 pt-32 md:pl-20 md:pt-60 lg:pl-40 flex flex-col items-center md:items-start text-center md:text-left'> 
         <div>
-            {/* CHANGE: text-4xl (mobile) scaling to text-7xl (desktop) 
-               so the name stays on the screen.
-            */}
             <h1 className='text-white font-bold text-4xl sm:text-5xl md:text-7xl font-serif hover:text-black transition-colors duration-300 leading-tight'>
               Mr. Balaji C
             </h1>
@@ -19,11 +13,7 @@ const TopContent = () => {
             </p>
         </div>
         
-        {/* Button Container */}
         <div className='flex flex-col sm:flex-row gap-4 w-full sm:w-auto'>
-            {/* CHANGE: Linked to your local public file. 
-               The 'download' attribute triggers the actual file download.
-            */}
             <a 
               href="/Balaji_C_Resume.pdf" 
               download="Balaji_C_Resume.pdf" 

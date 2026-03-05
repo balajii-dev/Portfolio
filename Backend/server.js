@@ -5,25 +5,21 @@ require('dotenv').config();
 
 const app = express();
 
-// Middleware
 app.use(express.json());
 
 app.use(cors({
   origin: [
-    "http://localhost:5173", // For local development
-    "https://portfolio-blue-psi-oidiiz6jv5.vercel.app" // Your live Vercel URL
+    "http://localhost:5173", 
+    "https://portfolio-blue-psi-oidiiz6jv5.vercel.app" 
   ],
   methods: ["GET", "POST"],
   credentials: true
 }));
 
-// MongoDB Connection
-
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.error("MongoDB Connection Error:", err));
 
-// Schema Definition
 const messageSchema = new mongoose.Schema({
   fullName: { type: String, required: true },
   email: { type: String, required: true },
@@ -33,17 +29,15 @@ const messageSchema = new mongoose.Schema({
 
 const Message = mongoose.model('Message', messageSchema);
 
-// Health check route for Render
 app.get('/', (req, res) => {
   res.send("Server is running perfectly!");
 });
 
-// POST Route to receive data from React
+
 app.post('/api/messages', async (req, res) => {
   try {
     const { fullName, email, message } = req.body;
     
-    // Basic validation
     if (!fullName || !email || !message) {
       return res.status(400).json({ success: false, message: "All fields are required" });
     }

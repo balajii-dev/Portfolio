@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactContent = () => {
   return (
-    // Added min-h to ensure the scroll can trigger the 'active' state in the navbar
+
     <div className="py-32 md:py-40 flex flex-col items-center justify-center bg-gray-900 min-h-[60vh]">
       
       <div className="text-center mb-16">

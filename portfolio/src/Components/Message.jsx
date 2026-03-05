@@ -13,7 +13,7 @@ const Message = ({ isOpen, onClose }) => {
     setLoading(true);
 
     try {
-      const response = await fetch('https://portfolio-backend-xyz.onrender.com/api/messages', {
+      const response = await fetch('https://portfolio-1-5tqr.onrender.com//api/messages', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

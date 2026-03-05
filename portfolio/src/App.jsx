@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Element } from 'react-scroll' // 1. Import Element
+import { Element } from 'react-scroll' 
 import Header from './Components/Header'
 import TopContainer from './TopContainer/TopContainer'
 import SkillContainer from './SkillContainer/SkillContainer'
@@ -18,8 +18,6 @@ const App = () => {
       
       <TopContainer />
       <SkillContainer />
-
-      {/* 2. Wrap Projects in an Element with the name 'Projects' */}
       <Element name="Projects">
         <Projects />
       </Element>

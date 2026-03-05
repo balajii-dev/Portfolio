@@ -23,7 +23,7 @@ const Message = ({ isOpen, onClose }) => {
 
       if (data.success) {
         toast.success("Message sent to Balaji C", { theme: "dark" });
-        setFormData({ fullName: '', email: '', message: '' }); // Clear form
+        setFormData({ fullName: '', email: '', message: '' }); 
         setTimeout(() => onClose(), 2000);
       } else {
         throw new Error("Failed to save message");

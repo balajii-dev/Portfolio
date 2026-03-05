@@ -19,15 +19,11 @@ const Header = ({ onJoinClick }) => {
 
   return (
     <nav className='flex bg-black h-20 text-white items-center shadow-2xl sticky top-0 z-[100] px-6 md:px-10 justify-between'>
-      
-      {/* Logo Section */}
       <div className='text-2xl md:text-3xl font-extrabold font-sans z-[110]'>
         <h1 className='cursor-default'>
           Develop<span className='text-green-600'>er</span>
         </h1>
       </div>
-
-      {/* Desktop Navigation */}
       <div className='hidden lg:flex items-center gap-8 font-sans uppercase text-sm tracking-wide'>
         {navLinks.map((link) => (
           <Link 
@@ -51,8 +47,6 @@ const Header = ({ onJoinClick }) => {
           Send Message
         </button>
       </div>
-
-      {/* Mobile Menu Toggle Button */}
       <div className="lg:hidden flex items-center">
         <button 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -62,8 +56,6 @@ const Header = ({ onJoinClick }) => {
           <i className={`fa-solid ${isMenuOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
         </button>
       </div>
-
-      {/* Mobile Sidebar Overlay */}
       <div className={`fixed top-0 right-0 h-screen w-full bg-black transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-500 ease-in-out lg:hidden z-[105] flex flex-col items-center justify-center gap-8 shadow-2xl`}>
         {navLinks.map((link) => (
           <Link 
@@ -87,8 +79,6 @@ const Header = ({ onJoinClick }) => {
           Send Message
         </button>
       </div>
-
-      {/* Background Overlay */}
       {isMenuOpen && (
         <div 
           className="fixed inset-0 bg-black/90 backdrop-blur-md lg:hidden z-[102]"

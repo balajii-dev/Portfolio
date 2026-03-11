@@ -15,8 +15,8 @@ const TopContent = () => {
         
         <div className='flex flex-col sm:flex-row gap-4 w-full sm:w-auto'>
             <a 
-              href="/Balaji_C_Resume.pdf" 
-              download="Balaji_C_Resume.pdf" 
+              href="/Balaji_Resume.pdf" 
+              download="Balaji_Resume.pdf" 
               className='w-full sm:w-auto'
             >
                 <button className='w-full bg-green-500 px-8 py-3 rounded-lg font-bold hover:bg-green-400 active:scale-95 transition-all text-black shadow-lg shadow-green-900/40 uppercase tracking-wider'>
